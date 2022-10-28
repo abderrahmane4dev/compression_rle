@@ -176,3 +176,6 @@ compressed_image.save('cablecar_decompressed.png')
 # This has to be equal to 0
 error_rate = np.count_nonzero(image - img_bw)
 print (f'Error Rate: {error_rate}') 
+
+
+
