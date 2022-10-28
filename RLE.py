@@ -176,3 +176,13 @@ compressed_image.save('cablecar_decompressed.png')
 # This has to be equal to 0
 error_rate = np.count_nonzero(image - img_bw)
 print (f'Error Rate: {error_rate}') 
+
+img_gray = cv2.imread('download.jpeg', cv2.IMREAD_GRAYSCALE)
+_, img_bw = cv2.threshold(img_gray, 100, 255, cv2.THRESH_BINARY)
+cv2.imwrite('download_bi.jpeg', img_bw)
+height, width = img_bw.shape
+encoded, rate = encode(img_bw, file_name='down_compressed.txt', bits=15)
+image = decode(height, width, file_name='down_compressed.txt', bits=15)
+compressed_image = Image.fromarray(image, mode='L')
+compressed_image.show()
+compressed_image.save('download_decompressed.jpeg')
