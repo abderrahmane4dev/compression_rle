@@ -29,7 +29,7 @@ with open("down_compressed.txt","r") as file:
        # Create an image from the QR Code instance
              img = qrcode.make(data)      
     # Save it somewhere, change the extension as needed:
-             img.save("codebar"+str(v)+".jpg")
+             img.save("codeqr"+str(v)+".jpg")
              v+=1
             # data=code[t:t+2300]
              #mg=qrcode.make(data)
@@ -69,7 +69,7 @@ sum = v
 v=0
 print(v)   
 while v<=sum  :
-    value=read_qr_code("codebar"+str(v)+".jpg")
+    value=read_qr_code("codeqr"+str(v)+".jpg")
     print("literation est")
     print(v)
    
