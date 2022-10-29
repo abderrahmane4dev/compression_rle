@@ -1,9 +1,6 @@
 import qrcode
-import glob
 import cv2
 import pandas as pd
-import pathlib
-import qrtools
 import qrcode.image.svg
 img = qrcode.make('test text')
 
